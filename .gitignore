@@ -1,0 +1,8 @@
+/.bin
+/build
+/vendor
+memory::
+composer.lock
+/dev
+/config/database.php
+.DS_Store

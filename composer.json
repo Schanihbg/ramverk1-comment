@@ -1,0 +1,28 @@
+{
+    "name": "anax/comment",
+    "type": "library",
+    "description": "Anax comment module.",
+    "keywords": ["boilerplate", "framework", "mvc", "micro", "education"],
+    "homepage": "https://dbwebb.se/anax",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon H",
+            "email": "sihu12@student.bth.se",
+            "homepage": "https://dbwebb.se",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/canax/comment/issues"
+    },
+    "autoload": {
+        "psr-4": { 
+            "Anax\\": "src/",
+            "Schanihbg\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    }
+}
