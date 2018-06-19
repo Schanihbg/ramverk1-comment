@@ -20,4 +20,12 @@ class CommentModelTest extends TestCase
             self::$di->get("comment")->showOnePost(1)
         );
     }
+
+    public function testViewAll(): void
+    {
+        $this->assertCount(
+            3, //Check if there is 3 comments.
+            self::$di->get("comment")->viewAll()
+        );
+    }
 }

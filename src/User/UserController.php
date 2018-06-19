@@ -32,8 +32,6 @@ class UserController implements
     /**
      * Description.
      *
-     * @param datatype $variable Description
-     *
      * @throws Exception
      *
      * @return void
@@ -53,8 +51,6 @@ class UserController implements
 
     /**
      * Description.
-     *
-     * @param datatype $variable Description
      *
      * @throws Exception
      *
@@ -83,8 +79,6 @@ class UserController implements
     /**
      * Description.
      *
-     * @param datatype $variable Description
-     *
      * @throws Exception
      *
      * @return void
@@ -110,6 +104,8 @@ class UserController implements
     /**
      * Handler with form to update a user.
      *
+     * @param datatype $id User ID
+     *
      * @return void
      */
     public function getPostUpdateUser($id)
@@ -134,7 +130,7 @@ class UserController implements
     /**
      * Description.
      *
-     * @param datatype $variable Description
+     * @param datatype $input What user to login.
      *
      * @throws Exception
      *
@@ -147,8 +143,6 @@ class UserController implements
 
     /**
      * Description.
-     *
-     * @param datatype $variable Description
      *
      * @throws Exception
      *
@@ -168,7 +162,7 @@ class UserController implements
     /**
      * Description.
      *
-     * @param datatype $variable Description
+     * @param datatype $userInput What user to check ID.
      *
      * @throws Exception
      *
@@ -185,8 +179,6 @@ class UserController implements
 
     /**
      * Description.
-     *
-     * @param datatype $variable Description
      *
      * @throws Exception
      *
@@ -209,6 +201,8 @@ class UserController implements
 
     /**
      * Delete user
+     *
+     * @param datatype $id User ID.
      *
      * @return void
      */

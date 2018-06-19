@@ -20,7 +20,6 @@ class GravatarModel implements ConfigureInterface, InjectionAwareInterface
      *
      * @param string $email The email address
      * @param string $size Size in pixels, defaults to 80px [ 1 - 2048 ]
-     * @param string $d Default imageset to use [ 404 | mm | identicon | monsterid | wavatar ]
      * @param string $rating Maximum rating (inclusive) [ g | pg | r | x ]
      * @param boole $img True to return a complete IMG tag False for just the URL
      * @param array $atts Optional, additional key/value attributes to include in the IMG tag

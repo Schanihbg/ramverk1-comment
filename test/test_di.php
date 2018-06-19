@@ -144,8 +144,36 @@ return [
             "shared" => true,
             "callback" => function () {
                 $database = new \Anax\Database\DatabaseQueryBuilder();
-                $database->configure(__DIR__."/test_database.php");
+                $database->configure([
+                        "dsn"             => "sqlite::memory:",
+                        "username"        => null,
+                        "password"        => null,
+                        "driver_options"  => null,
+                        "fetch_mode"      => \PDO::FETCH_OBJ,
+                        "table_prefix"    => null,
+                        "session_key"     => "Anax\Database",
+
+                        // True to be very verbose during development
+                        "verbose"         => null,
+
+                        // True to be verbose on connection failed
+                        "debug_connect"   => true,
+                    ]);
                 $database->connect();
+
+                $sql = 'CREATE TABLE `ramverk1_comment` (
+                            `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                            `email` varchar(45) DEFAULT NULL,
+                            `comment` varchar(255) DEFAULT NULL
+                        )';
+                $database->execute($sql);
+
+                $sql = 'INSERT INTO `ramverk1_comment` (`id`, `email`, `comment`) VALUES
+                        (NULL, "test@test.com", "Hello World"),
+                        (NULL, "test@test.com", "Test2"),
+                        (NULL, "test5@test.com", "Comment1")';
+
+                $database->execute($sql);
                 return $database;
             }
         ],
