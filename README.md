@@ -20,7 +20,8 @@ Short examples on how to use the module comment.
 * Insert changes from PHP files in `setup` to corresponding PHP files in `config`.
 * Copy content in `view` folder to corresponding `view` folder.
 * Modify `config/database.php` for connection to database.
-* Import `ramverk1_comment` to database.
+* Import `ramverk1_comment.sql` and `user.sql` to database.
+* Create user and change admin flag if needed in database.
 
 Requirements
 -----------------
