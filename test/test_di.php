@@ -37,15 +37,6 @@ return [
                 return $url;
             }
         ],
-        "router" => [
-            "shared" => true,
-            "callback" => function () {
-                $router = new \Anax\Route\Router();
-                $router->setDI($this);
-                $router->configure("route2.php");
-                return $router;
-            }
-        ],
         "view" => [
             "shared" => true,
             "callback" => function () {

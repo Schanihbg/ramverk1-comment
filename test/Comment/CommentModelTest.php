@@ -28,4 +28,12 @@ class CommentModelTest extends TestCase
             self::$di->get("comment")->viewAll()
         );
     }
+
+    public function testEditPost(): void
+    {
+        $this->assertEquals(
+            2, //Check if edit ID is 2
+            self::$di->get("comment")->editPost(2)->id
+        );
+    }
 }
