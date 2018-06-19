@@ -1,14 +1,11 @@
 Anax comment
 ==================================
 
-[![Latest Stable Version](https://poser.pugx.org/anax/comment/v/stable)](https://packagist.org/packages/anax/comment)
-[![Join the chat at https://gitter.im/mosbth/anax](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/canax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/canax/comment.svg?branch=master)](https://travis-ci.org/canax/comment)
-[![CircleCI](https://circleci.com/gh/canax/comment.svg?style=svg)](https://circleci.com/gh/canax/comment)
-[![Build Status](https://scrutinizer-ci.com/g/canax/comment/badges/build.png?b=master)](https://scrutinizer-ci.com/g/canax/comment/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/comment/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/comment/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/canax/comment/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/comment/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d831fd4c-b7c6-4ff0-9a83-102440af8929/mini.png)](https://insight.sensiolabs.com/projects/d831fd4c-b7c6-4ff0-9a83-102440af8929)
+
+[![Build Status](https://travis-ci.org/Schanihbg/ramverk1-comment.svg?branch=master)](https://travis-ci.org/Schanihbg/ramverk1-comment)
+[![Build Status](https://scrutinizer-ci.com/g/Schanihbg/ramverk1-comment/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Schanihbg/ramverk1-comment/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Schanihbg/ramverk1-comment/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Schanihbg/ramverk1-comment/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/Schanihbg/ramverk1-comment/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Schanihbg/ramverk1-comment/?branch=master)
 
 Anax comment module.
 
@@ -19,8 +16,20 @@ Usage
 
 Short examples on how to use the module comment.
 
-* copy from setup to config
+* Copy `route` folder from `setup` to `config` folder.
+* Insert changes from PHP files in `setup` to corresponding PHP files in `config`.
+* Copy content in `view` folder to corresponding `view` folder.
+* Modify `config/database.php` for connection to database.
+* Import `ramverk1_comment` to database.
 
+Requirements
+-----------------
+I have tested with these components:
+```
+MariaDB 10.3
+PHP 7.2.2
+Apache 2.4.33
+```
 
 License
 ------------------

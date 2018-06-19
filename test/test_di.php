@@ -68,8 +68,6 @@ return [
             "active" => true,
             "callback" => function () {
                 $session = new \Anax\Session\SessionConfigurable();
-                $session->configure("session.php");
-                $session->name("ThisDoesNotMatter");
                 $session->start();
                 return $session;
             }
@@ -110,28 +108,10 @@ return [
                 return $obj;
             }
         ],
-        "rem" => [
-            "shared" => true,
-            "callback" => function () {
-                $rem = new \Anax\RemServer\RemServer();
-                $rem->configure("remserver.php");
-                $rem->injectSession($this->get("session"));
-                return $rem;
-            }
-        ],
-        "remController" => [
-            "shared" => false,
-            "callback" => function () {
-                $rem = new \Anax\RemServer\RemServerController();
-                $rem->setDI($this);
-                return $rem;
-            }
-        ],
         "comment" => [
             "shared" => true,
             "callback" => function () {
-                $comment = new \Anax\Comment\CommentModel();
-                $comment->configure("remserver.php");
+                $comment = new \Schanihbg\Comment\CommentModel();
                 $comment->injectSession($this->get("session"));
                 $comment->setDI($this);
                 return $comment;
@@ -140,7 +120,7 @@ return [
         "commentController" => [
             "shared" => false,
             "callback" => function () {
-                $commentController = new \Anax\Comment\CommentController();
+                $commentController = new \Schanihbg\Comment\CommentController();
                 $commentController->setDI($this);
                 return $commentController;
             }
@@ -148,14 +128,14 @@ return [
         "gravatar" => [
             "shared" => true,
             "callback" => function () {
-                $gravatar = new \Anax\Gravatar\GravatarModel();
+                $gravatar = new \Schanihbg\Gravatar\GravatarModel();
                 return $gravatar;
             }
         ],
         "gravatarController" => [
             "shared" => false,
             "callback" => function () {
-                $gravatarController = new \Anax\Gravatar\GravatarController();
+                $gravatarController = new \Schanihbg\Gravatar\GravatarController();
                 $gravatarController->setDI($this);
                 return $gravatarController;
             }
@@ -164,23 +144,15 @@ return [
             "shared" => true,
             "callback" => function () {
                 $database = new \Anax\Database\DatabaseQueryBuilder();
-                $database->configure("database.php");
+                $database->configure(__DIR__."/test_database.php");
                 $database->connect();
                 return $database;
-            }
-        ],
-        "bookController" => [
-            "shared" => true,
-            "callback" => function () {
-                $obj = new \Anax\Book\BookController();
-                $obj->setDI($this);
-                return $obj;
             }
         ],
         "userController" => [
             "shared" => true,
             "callback" => function () {
-                $obj = new \Anax\User\UserController();
+                $obj = new \Schanihbg\User\UserController();
                 $obj->setDI($this);
                 return $obj;
             }

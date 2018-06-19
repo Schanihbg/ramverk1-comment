@@ -6,3 +6,4 @@ composer.lock
 /dev
 /config/database.php
 .DS_Store
+/test/test_database.php
