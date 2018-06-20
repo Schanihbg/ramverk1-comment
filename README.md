@@ -16,6 +16,7 @@ Usage
 
 Short examples on how to use the module comment.
 
+* Install via `composer require schanihbg/comment`
 * Copy `route` folder from `setup` to `config` folder.
 * Insert changes from PHP files in `setup` to corresponding PHP files in `config`.
 * Copy content in `view` folder to corresponding `view` folder.
